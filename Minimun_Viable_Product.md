@@ -38,6 +38,10 @@ A key premise behind this idea is that you produce an actual product (ex. landin
 
 ---
 
+<!-- .slide: data-background="./img/mvp.png" -->
+
+---
+
 ### Common Pitfalls
 
 * Thinking MVP is the smallest amount of functionality (forgetting that the goal is business viability of the&nbsp;product)

@@ -1,3 +1,9 @@
+:root{
+  --primary: #0074d9;
+  --secondary: rgb(254, 1, 57);
+  --background: rgba(10, 5, 5, 0.90);
+}
+
 /**
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
  *
@@ -22,8 +28,8 @@ section.has-light-background h6 {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #191919;
-  background-color: #191919;
+  background: var(--background);
+  background-color: var(--background);
   font-family: "Merriweather", serif;
 }
 p{
@@ -79,14 +85,18 @@ p{
   text-transform: none;
   font-size: 2em;
   font-weight: 900;
+  color: var(--secondary);
+
 }
 .reveal h2{
   opacity: 0.25;
-  font-size: 1em;
+  font-size: 0.75em;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
 .reveal h3{
+  font-family: "Merriweather", serif;
+  color: var(--secondary);
   text-transform: none;
   font-size: 1.5em;
   font-weight: 700;
@@ -103,8 +113,11 @@ p{
   font-size: 0.25em;
 }
 .reveal p{
-  opacity: 0.5;
+  opacity: 1;
   font-size: 1em;
+  max-width: 80%;
+  margin-right: auto!important;
+  margin-left: auto!important;
 }
 .reveal ul, .reveal ol{
   opacity: 0.5;
@@ -283,7 +296,8 @@ p{
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: var(--primary);
+  opacity: 1;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -291,14 +305,14 @@ p{
 }
 
 .reveal a:hover {
-  color: #8dcffc;
+  opacity: 0.75;
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9;
+  background: var(--primary);
 }
 
 /*********************************************
@@ -306,9 +320,10 @@ p{
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  /* background: rgba(255, 255, 255, 0.12); */
+  /* border: 4px solid #fff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
 }
 
 .reveal section img.plain {
@@ -324,7 +339,7 @@ p{
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #42affa;
+  border-color: var(--primary);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -332,7 +347,7 @@ p{
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #42affa;
+  color: var(--primary);
 }
 
 /*********************************************
@@ -340,7 +355,7 @@ p{
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #42affa;
+  color: var(--primary);
 }
 
 .reveal .progress span {
@@ -354,6 +369,15 @@ p{
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #191919;
+    background-color: var(--background);
   }
+}
+
+
+/*********************************************
+ * MISC
+ *********************************************/
+
+.contained * {
+   background-size: contain!important;
 }
