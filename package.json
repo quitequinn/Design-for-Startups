@@ -1,0 +1,25 @@
+{
+  "name": "open-source-lecture-slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reveal-md path/to/my/slides.md",
+  "scripts": {
+    "start": "reveal-md . --theme theme/qt-dark.css --listing-template listing.html --scripts script.js",
+    "pdf": "(killall -9 node || echo 'Process was not running.') && reveal-md slides.md --theme theme/qt-dark.css --listing-template listing.html --scripts script.js--print slides.pdf",
+    "dev": "(killall -9 node || echo 'Process was not running.') && reveal-md . -w --theme theme/qt-dark.css --listing-template listing.html --scripts script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quitequinn/Open-Source-Lecture-Slides.git"
+  },
+  "author": "Quinn Keaveney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quitequinn/Open-Source-Lecture-Slides/issues"
+  },
+  "homepage": "https://github.com/quitequinn/Open-Source-Lecture-Slides#readme",
+  "dependencies": {
+    "reveal-md": "^3.5.0",
+    "reveal.js-menu": "^2.1.0"
+  }
+}
