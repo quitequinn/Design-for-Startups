@@ -8,8 +8,9 @@ script:
   - npm run build
 deploy:
   provider: pages
+  local_dir: docs
   skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
+  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
   on:
     branch: master
