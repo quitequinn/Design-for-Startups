@@ -26,7 +26,7 @@ I'm only talking about the final handoff, not how you conduct in progress delive
 
 ---
 
-
+https://uxdesign.cc/design-assets-version-control-and-you-566a00bf0eee
 
 ---
 
