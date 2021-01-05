@@ -4,10 +4,10 @@
   "description": "",
   "main": "reveal-md path/to/my/slides.md",
   "scripts": {
-    "start": "reveal-md . --theme theme/qt-dark.css --listing-template listing.html --scripts script.js",
-    "pdf": "(killall -9 node || echo 'Process was not running.') && reveal-md slides.md --theme theme/qt-dark.css --listing-template listing.html --scripts script.js--print slides.pdf",
-    "dev": "(killall -9 node || echo 'Process was not running.') && reveal-md . -w --theme theme/qt-dark.css --listing-template listing.html --scripts script.js",
-    "build": "reveal-md . --theme theme/qt-dark.css --listing-template listing.html --scripts script.js --static --static-dirs=assets"
+    "start": "reveal-md . --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts script.js",
+    "pdf": "(killall -9 node || echo 'Process was not running.') && reveal-md slides.md --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts script.js--print slides.pdf",
+    "dev": "(killall -9 node || echo 'Process was not running.') && reveal-md . -w --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts script.js",
+    "build": "reveal-md . --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts script.js --static --static-dirs=assets"
   },
   "repository": {
     "type": "git",
