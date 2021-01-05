@@ -14,7 +14,7 @@ https://relevant.software/blog/statement-of-work-sow-in-software-development-eve
 
 ---
 
-<!-- .slide: data-background="./img/funnel-new-grad-50.png" -->
+<!-- .slide: data-background="./assets/img/funnel-new-grad-50.png" -->
 ### Assumptions
 ### Hypotheses
 ### Outcomes

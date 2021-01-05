@@ -3,7 +3,7 @@
 
 ---
 
-<!-- .slide: data-background="./img/funnel-new-grad-50.png" -->
+<!-- .slide: data-background="./assets/img/funnel-new-grad-50.png" -->
 ### Assumptions
 ### Hypotheses
 ### Outcomes
@@ -18,7 +18,7 @@ This reveals the team’s divergence of opinions and also exposes a broad set of
 
 ---
 
-<!-- .slide: data-background="./img/funnel-open-50.png" -->
+<!-- .slide: data-background="./assets/img/funnel-open-50.png" -->
 Problem Statement
 
 Declaring Assumptions
@@ -46,7 +46,7 @@ Gather your team, and begin declaring assumptions. Make sure you have representa
 
 ---
 
-<!-- .slide: data-background="./img/assumptions-canvas.png" -->
+<!-- .slide: data-background="./assets/img/assumptions-canvas.png" -->
 
 ---
 
@@ -64,7 +64,7 @@ More granular descriptions of our assumptions that target specific areas of our 
 
 ---
 
-<!-- .slide: data-background="./img/funnel-open-50.png" -->
+<!-- .slide: data-background="./assets/img/funnel-open-50.png" -->
 Hypothesis Statement
 
 Subhypotheses

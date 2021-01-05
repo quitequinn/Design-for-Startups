@@ -42,11 +42,11 @@ Remove any form of versioning in the name, naming should describe function.
 
 ---
 
-<!-- .slide: class="contained" data-background="./img/bad-naming.png" -->
+<!-- .slide: class="contained" data-background="./assets/img/bad-naming.png" -->
 
 ---
 
-<!-- .slide: class="contained" data-background="./img/good-naming.png" -->
+<!-- .slide: class="contained" data-background="./assets/img/good-naming.png" -->
 
 ---
 
@@ -57,7 +57,7 @@ Web sites are files. These files vary in size. The larger a website, the slower 
 ---
 
 https://imageoptim.com/mac
-<img src="./img/imageoptim.png"/>
+<img src="./assets/img/imageoptim.png"/>
 
 ---
 
@@ -83,7 +83,7 @@ https://material.io/design/typography/the-type-system.html#type-scale
 
 ---
 
-<!-- .slide: class="contained" data-background="./img/type-styles.png" -->
+<!-- .slide: class="contained" data-background="./assets/img/type-styles.png" -->
 
 ---
 

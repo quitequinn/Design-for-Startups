@@ -10,12 +10,12 @@ Vision, Framing, and&nbsp;Outcomes
 
 ---
 
-| <img src="./img/tree-1.png"/> | <img src="./img/tree-2.png"/> | <img src="./img/tree-3.png"/> | <img src="./img/tree-4.png"/> | <img src="./img/tree-5.png"/> | <img src="./img/tree-6.png"/> |
+| <img src="./assets/img/tree-1.png"/> | <img src="./assets/img/tree-2.png"/> | <img src="./assets/img/tree-3.png"/> | <img src="./assets/img/tree-4.png"/> | <img src="./assets/img/tree-5.png"/> | <img src="./assets/img/tree-6.png"/> |
 |-|-|-|-|-|-|
 |How the customer explained it|How the project leader understood it|How the analyst designed it|How the programmer wrote it|What the beta testers received|How the business consultant described&nbsp;it|
 |<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|
 
-| <img src="./img/tree-7.png"/> | <img src="./img/tree-8.png"/> | <img src="./img/tree-9.png"/> | <img src="./img/tree-10.png"/> | <img src="./img/tree-11.png"/> | <img src="./img/tree-12.png"/> |
+| <img src="./assets/img/tree-7.png"/> | <img src="./assets/img/tree-8.png"/> | <img src="./assets/img/tree-9.png"/> | <img src="./assets/img/tree-10.png"/> | <img src="./assets/img/tree-11.png"/> | <img src="./assets/img/tree-12.png"/> |
 |-|-|-|-|-|-|
 |How the project was documented|What operations installed|How the customer was billed|How it was supported|What marketing advertised|What the customer really&nbsp;needed|
 |<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|<br/><br/>|
@@ -38,7 +38,7 @@ A key premise behind this idea is that you produce an actual product (ex. landin
 
 ---
 
-<!-- .slide: data-background="./img/mvp.png" -->
+<!-- .slide: data-background="./assets/img/mvp.png" -->
 
 ---
 
