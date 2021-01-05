@@ -6,7 +6,7 @@
   "scripts": {
     "start": "reveal-md . --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts ../assets/js/script.js",
     "dev": "(killall -9 node || echo 'Process was not running.') && reveal-md . -w --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts ../assets/js/script.js",
-    "pdf": "(killall -9 node || echo 'Process was not running.') && reveal-md slides.md --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts ../assets/js/script.js --print slides/slides.pdf",
+    "pdf": "(killall -9 node || echo 'Process was not running.') && for i in *.md; do [ -f '$i' ] || break && reveal-md '$i' --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts ../assets/js/script.js --print 'pdf/$i.pdf'; done;",
     "build": "reveal-md . --theme ../assets/theme/qt-dark.css --listing-template listing.html --scripts ../assets/js/script.js --static --static-dirs=assets"
   },
   "repository": {
