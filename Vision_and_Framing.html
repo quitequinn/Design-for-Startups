@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/qt-dark.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">## Lean UX Principles
+# Vision, Framing, and&nbsp;Outcomes
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./assets/img/funnel-new-grad-50.png" -->
+### Assumptions
+### Hypotheses
+### Outcomes
+### Personas
+### Features
+</script></section><section  data-markdown><script type="text/template">
+### Assumptions
+A high-level declaration of what we believe to be true.
+This reveals the team’s divergence of opinions and also exposes a broad set of possible solutions.
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./assets/img/funnel-open-50.png" -->
+Problem Statement
+
+Declaring Assumptions
+</script></section><section  data-markdown><script type="text/template">
+#### Problem Statement
+The problem statement gives your team a clear focus for their work. It also defines any important constraints.
+</script></section><section  data-markdown><script type="text/template">
+##### Made of three elements:
+* The current goals of the product or system
+* The problem the business stakeholder wants addressed (i.e., where the goals aren’t being met)
+* An explicit request for improvement that doesn’t dictate a specific solution
+</script></section><section  data-markdown><script type="text/template">
+**[Our service/product]** was designed to achieve **[these goals]**. We have observed that the product/service isn’t meeting **[these goals]**, which is causing **[this adverse effect]** to our business. How might we improve **[service/product]** so that our customers are more successful based on **[these measurable criteria]**?
+</script></section><section  data-markdown><script type="text/template">
+#### Declaring Assumptions
+Gather your team, and begin declaring assumptions. Make sure you have representatives for each section. It can be helpful to have a framework when organizing your findings.
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./assets/img/assumptions-canvas.png" -->
+</script></section><section  data-markdown><script type="text/template">
+##### Please prepare:
+* Reports that show how the current product is being used
+* Reports that show why customers are taking certain actions
+* Info on attempts to fix this issue and their successes/failures
+* Analysis of how solving this problem will affect the performance
+* Competitive analyses that show how others are tackling this issues
+</script></section><section  data-markdown><script type="text/template">
+### Hypotheses
+More granular descriptions of our assumptions that target specific areas of our product or workflow for experimentation.
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./assets/img/funnel-open-50.png" -->
+Hypothesis Statement
+
+Subhypotheses
+</script></section><section  data-markdown><script type="text/template">
+#### Hypothesis Statement
+This stage takes much of the subjective and political conversation out of the decision-making process and instead orients the team toward feedback from the market.
+</script></section><section  data-markdown><script type="text/template">
+We believe **[this statement is true]**.
+
+We will know we’re **[right/wrong]** when we see the following feedback from the market:
+
+**[qualitative feedback]** and/or **[quantitative feedback]** and/or **[key performance indicator change]**.
+</script></section><section  data-markdown><script type="text/template">
+#### Subhypotheses
+Often your hypothesis is too large to reliably test. Thats why we break them down into Subhypotheses.
+</script></section><section  data-markdown><script type="text/template">
+We believe that **[doing this/building this feature/creating this experience]** for **[these people/personas]** will achieve **[this outcome]**.
+
+We will know this is true when we see **[this market feedback, quantitative measure, or qualitative insight]**.
+</script></section><section  data-markdown><script type="text/template">
+### Outcomes
+The signal we seek from the market to help us validate or invalidate our hypotheses. These are often quantitative but can also be qualitative.
+</script></section><section  data-markdown><script type="text/template">
+Look at the high-level outcomes you are trying to improve (e.g., increasing signups, increasing usage, etc.). This will be the indicators of the products performance.
+</script></section><section  data-markdown><script type="text/template">
+### Personas
+Models of the people for whom we believe we are solving a problem.
+</script></section><section  data-markdown><script type="text/template">
+1. Sketch/name
+1. Behavior/demographic info
+1. Pains & Gains
+1. Requested solutions
+</script></section><section  data-markdown><script type="text/template">
+Lean UX Personas start with validated assumptions. Instead of spending months interviewing people, we spend a few hours creating proto-personas. This helps us avoid the Sunk cost fallacy. 
+
+Its ok to improve proto-personas as we learn more.
+</script></section><section  data-markdown><script type="text/template">
+### Features
+The product changes or improvements we believe will drive the outcomes we seek.
+</script></section><section  data-markdown><script type="text/template">
+The important difference in Lean UX is that features exist to serve the needs of the business, the customer, and the user. Feature Lists and Gant charts are helpful, but try to prioritize features where your time provides the most satisfaction.
+</script></section><section  data-markdown><script type="text/template">
+### Further reading
+
+1. Vision, Framing, and Outcomes [(oreilly.com)](https://www.oreilly.com/library/view/designing-for-product/9781491971451/ch05.html)</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"transition":"none","touch":true}, queryOptions);
+    </script>
+
+    <script src="./_assets/script.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

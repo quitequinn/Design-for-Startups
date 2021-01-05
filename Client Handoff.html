@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/qt-dark.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+## …don't I already know
+# Client Handoffs
+</script></section><section  data-markdown><script type="text/template">
+There’s no hand off in product design.
+</script></section><section  data-markdown><script type="text/template">
+There’s no hand FINAL off in LEAN UX product design.
+</script></section><section  data-markdown><script type="text/template">
+But there could come a time when you must stop working.
+</script></section><section  data-markdown><script type="text/template">
+| Discussion | Intermission | Design | Build | Beta | Announce |
+|-|-|-|-|-|-|
+
+</script></section><section  data-markdown><script type="text/template">
+I'm only talking about the final handoff, not how you conduct in progress deliverables.
+</script></section><section  data-markdown><script type="text/template">
+https://uxdesign.cc/design-assets-version-control-and-you-566a00bf0eee
+</script></section><section  data-markdown><script type="text/template">
+### Mockups
+
+Don't deliver earlier iterations unless they are archived.
+</script></section><section  data-markdown><script type="text/template">
+Clearly name your files.
+
+Remove any form of versioning in the name, naming should describe function.
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: class="contained" data-background="./assets/img/bad-naming.png" -->
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: class="contained" data-background="./assets/img/good-naming.png" -->
+</script></section><section  data-markdown><script type="text/template">
+### Image Optimization
+
+Web sites are files. These files vary in size. The larger a website, the slower it may load. This impacts page ranking, overall site performance, and the credibility of the site in the eyes of search engines.
+</script></section><section  data-markdown><script type="text/template">
+https://imageoptim.com/mac
+<img src="./assets/img/imageoptim.png"/>
+</script></section><section  data-markdown><script type="text/template">
+### Typography
+
+Consider what the client needs to take action on type choices:
+
+* Licenses
+* Styles
+</script></section><section  data-markdown><script type="text/template">
+#### Licenses
+Don't try to hide the costs, and don't use fonts the client can't afford. Otherwise you could have to hire a very expensive lawyer one day long after finishing with the client.
+</script></section><section  data-markdown><script type="text/template">
+#### Styles
+Licensing and getting developers the right fonts is the first step. The next step is proper documentation of your type styles. Apply them throughout your design file to ensure an efficiency and simple design & development process.
+
+https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/
+https://material.io/design/typography/the-type-system.html#type-scale
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: class="contained" data-background="./assets/img/type-styles.png" -->
+</script></section><section  data-markdown><script type="text/template">
+If you have an H1 on desktop that is 72px, you may not want it to be the same size on mobile. When I make type styles I usually create a desktop and mobile set of type sizes.
+
+Then you need to set rules to clarify how typography works in responsive. Does the type scale up dynamically? Or does it jump to a different size when it reaches a break point. Make sure you clarify how you want the type to behave before you hand off the files.
+</script></section><section  data-markdown><script type="text/template">
+* It ensures your design is consistent: If you take the time before diving in on a project to get your system right, you won’t waste time needing to think about type sizing or spacing. A strong system frees you up to design faster.
+
+* Revisions are much quicker: Imagine you have an app with 120 screens and a stakeholder decides halfway through the design they want to change the font. If type styles are used this is a 5 minute change, if not it will take hours.
+</script></section><section  data-markdown><script type="text/template">
+### UI Documentation
+
+I like to break up sections and treat them simular to the typography. Some of these include:
+
+* Components
+* Color
+* Grid System
+* Responsive Principles
+* Micro/Animations 
+</script></section><section  data-markdown><script type="text/template">
+### Version Control
+
+Figma, Google Drive, Github, etc. Pick one and become familiar with it.
+</script></section><section  data-markdown><script type="text/template">
+### Automation
+
+You shouldn't have to redline designs with specs, measurements, and style guides. Use a tool.
+
+[Zeplin](https://zeplin.io/?ref=uxtools.co), [Avocode](https://avocode.com/?ref=uxtools.co), [InVision’s Inspect](http://blog.invisionapp.com/insight-ui-designers-developers-collaboration), [Sympli](https://sympli.io) and [Lingo](https://www.lingoapp.com/) to name a&nbsp;few.
+</script></section><section  data-markdown><script type="text/template">
+The best part of automation is that you can hold the developer and client accountable to your designs. There should be no need for them to generate their own versions.
+</script></section><section  data-markdown><script type="text/template">
+Brand guides don't end at style and assets.
+
+Don't forget to communicate the system you are using to make overarching design decisions. 
+</script></section><section  data-markdown><script type="text/template">
+Help the company continue your thinking into new features.
+
+Here are some examples:
+</script></section><section  data-markdown><script type="text/template">
+You're chosen grid.
+
+[8 Point Grid](https://spec.fm/specifics/8-pt-grid) is an example where divisions of 8 define columns, gutters, font sizes and more.
+</script></section><section  data-markdown><script type="text/template">
+State changes / interactive elements.
+
+[PaintCode](https://medium.com/sketch-app-sources/design-to-development-my-process-for-ios-asset-management-and-handoff-da4fb7d9471e#.nc5kn3sbp) deals with this well.
+</script></section><section  data-markdown><script type="text/template">
+### Checklist
+
+Lets avoid 🤦s when possible.
+</script></section><section  data-markdown><script type="text/template">
+* Maintain a plain-jane checklist of all the cases & features that need to be designed; created & managed by the designer on the project.
+* The checklist will flag the status of the feature being picked up or not, and whether it’s completed or under works. All the completed rows should have the link to the corresponding design.
+* If a certain feature is moved to the next version because of a certain dependency, then the corresponding team is marked along with a describing comment.
+</script></section><section  data-markdown><script type="text/template">
+### Final Handoff
+
+I like to schedule a handoff meeting so everyone is on the same page.
+
+Usually it is structered like so:
+   Provide background on the project
+   Walk through the design system and prototype
+   Briefly explain the design documentation
+   Touch on how success will be measured
+   Clarify timeline and set project milestones/goals
+   Answer any questions
+   Inspire the team (not just the client)
+</script></section><section  data-markdown><script type="text/template">
+### Post Handoff
+
+Often development doesn't match the designs, thats why we plan a clear way to communicate issues.
+
+Some platforms are Asana, Jira, Github.
+The key element here is a single place to communicate feature based issues that doesn't distract from implementation but aids it.
+</script></section><section  data-markdown><script type="text/template">
+examples
+https://blog.lingoapp.com/building-and-sharing-esalons-visual-language-with-lingo-4b5cd65dcb5f
+</script></section><section  data-markdown><script type="text/template">
+further resources
+https://www.intercom.com/blog/there-is-no-hand-off-product-design/
+
+</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"transition":"none","touch":true}, queryOptions);
+    </script>
+
+    <script src="./_assets/script.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

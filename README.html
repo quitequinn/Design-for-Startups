@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/qt-dark.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># Open Source Lecture Slides
+
+This is basically a repo to organize my thoughts on how best to create lecture notes that are opensource and improvable by the community.
+A large range of topics can be found on https://slides.com/.
+
+## Installation
+
+```bash
+npm install
+```
+
+## Usage
+
+```bash
+npm run dev
+```
+
+This starts a local server and opens any Markdown file as a reveal.js presentation in the default browser.
+
+## Software
+
+I'm basically just using reveal-md so I'm going to include relevant info on that package below. 
+
+- [Markdown](#markdown)
+- [Theme](#theme)
+- [Highlight Theme](#highlight-theme)
+- [Custom Slide Separators](#custom-slide-separators)
+- [Custom Slide Attributes](#custom-slide-attributes)
+- [reveal-md Options](#reveal-md-options)
+- [Reveal.js Options](#revealjs-options)
+- [Speaker Notes](#speaker-notes)
+- [YAML Front Matter](#yaml-front-matter)
+- [Live Reload](#live-reload)
+- [Custom Scripts](#custom-scripts)
+- [Custom CSS](#custom-css)
+- [Custom Favicon](#custom-favicon)
+- [Pre-process Markdown](#pre-process-markdown)
+- [Print to PDF](#print-to-pdf)
+- [Static Website](#static-website)
+- [Disable Auto-open Browser](#disable-auto-open-browser)
+- [Directory Listing](#directory-listing)
+- [Custom Port](#custom-port)
+- [Custom Template](#custom-template)
+
+### Markdown
+
+The Markdown feature of reveal.js is awesome, and has an easy (and configurable) syntax to separate slides. Use three
+dashes surrounded by two blank lines (`\n---\n`). Example:
+
+```text
+# Title
+
+* Point 1
+* Point 2
+</script></section><section  data-markdown><script type="text/template">
+## Second slide
+
+> Best quote ever.
+
+<aside class="notes"><p>speaker notes FTW!</p>
+<pre><code>
+### Theme
+
+Override theme (default: `black`):
+
+```bash
+reveal-md slides.md --theme solarized</code></pre><p>See <a href="https://github.com/hakimel/reveal.js/tree/master/css/theme">available themes</a>.</p>
+<p>Override reveal theme with a custom one. In this example, the file is at <code>./theme/my-custom.css</code>:</p>
+<pre><code class="language-bash">reveal-md slides.md --theme theme/my-custom.css</code></pre>
+<p>Override reveal theme with a remote one (use rawgit.com because the url must allow cross-site access):</p>
+<pre><code class="language-bash">reveal-md slides.md --theme https://rawgit.com/puzzle/pitc-revealjs-theme/master/theme/puzzle.css</code></pre>
+<h3 id="highlight-theme">Highlight Theme</h3>
+<p>Override highlight theme (default: <code>zenburn</code>):</p>
+<pre><code class="language-bash">reveal-md slides.md --highlight-theme github</code></pre>
+<p>See <a href="https://github.com/isagalaev/highlight.js/tree/master/src/styles">available themes</a>.</p>
+<h3 id="custom-slide-separators">Custom Slide Separators</h3>
+<p>Override slide separator (default: <code>\n---\n</code>):</p>
+<pre><code class="language-bash">reveal-md slides.md --separator &quot;^\n\n\n&quot;</code></pre>
+<p>Override vertical/nested slide separator (default: <code>\n----\n</code>):</p>
+<pre><code class="language-bash">reveal-md slides.md --vertical-separator &quot;^\n\n&quot;</code></pre>
+<h3 id="custom-slide-attributes">Custom Slide Attributes</h3>
+<p>Use the <a href="https://github.com/hakimel/reveal.js#slide-attributes">reveal.js slide attributes</a> functionality to add HTML
+attributes, e.g. custom backgrounds. Alternatively, add an HTML <code>id</code> attribute to a specific slide and style it with
+CSS.</p>
+<p>Example: set the second slide to have a PNG image as background:</p>
+<p>```text</p>
+<h1 id="slide1">slide1</h1>
+<p>This slide has no background image.</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./image1.png" -->
+# slide2
+
+This one does!
+```
+
+### reveal-md Options
+
+Define options similar to command-line options in a `reveal-md.json` file that must be located at the root of the
+Markdown files. They'll be picked up automatically. Example:
+
+```json
+{
+  "separator": "^\n\n\n",
+  "verticalSeparator": "^\n\n"
+}
+```
+
+### Reveal.js Options
+
+Define Reveal.js [options](https://github.com/hakimel/reveal.js#configuration) in a `reveal.json` file that must be
+located at the root directory of the Markdown files. They'll be picked up automatically. Example:
+
+```json
+{
+  "controls": true,
+  "progress": true
+}
+```
+
+### Speaker Notes
+
+Use the [speaker notes](https://github.com/hakimel/reveal.js#speaker-notes) feature by using a line starting with
+`<aside class="notes"><p>`.</p>
+<h3 id="yaml-front-matter">YAML Front matter</h3>
+<p>Set Markdown (and reveal.js) options specific to a presentation with YAML front matter:</p>
+<p>```</p>
+</aside></script></section><section  data-markdown><script type="text/template">title: Foobar
+separator: <!--s-->
+verticalSeparator: <!--v-->
+theme: solarized
+revealOptions:
+    transition: 'fade'</script></section><section  data-markdown><script type="text/template">Foo
+
+<aside class="notes"><p>test note</p>
+<!--s-->
+
+<h1 id="bar">Bar</h1>
+<!--v-->
+<pre><code>
+### Live Reload
+
+Using `-w` option changes to markdown files will trigger the browser to reload and thus display the changed presentation
+without the user having to reload the browser.
+
+### Custom Scripts
+
+Inject custom scripts into the page:
+
+```bash
+reveal-md slides.md --scripts script.js,another-script.js</code></pre><p>Don&#39;t use absolute paths, files should be in adjacent or descending folders.</p>
+<h3 id="custom-css">Custom CSS</h3>
+<p>Inject custom CSS into the page:</p>
+<pre><code class="language-bash">reveal-md slides.md --css style.css,another-style.css</code></pre>
+<p>Don&#39;t use absolute paths, files should be in adjacent or descending folders.</p>
+<h3 id="custom-favicon">Custom Favicon</h3>
+<p>If the directory with the markdown files contains a <code>favicon.ico</code> file, it will automatically be used as a favicon
+instead of the <a href="lib/favicon.ico">default favicon</a>.</p>
+<h3 id="pre-process-markdown">Pre-process Markdown</h3>
+<p><code>reveal-md</code> can be given a markdown preprocessor script via the <code>--preprocessor</code> (or <code>-P</code>) option. This can be useful to
+implement custom tweaks on the document format without having to dive into the guts of the Markdown parser.</p>
+<p>For example, to have headers automatically create new slides, one could have the script <code>preproc.js</code>:</p>
+<pre><code class="language-javascript">// headings trigger a new slide
+// headings with a caret (e.g., &#39;##^ foo`) trigger a new vertical slide
+module.exports = (markdown, options) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    return resolve(
+      markdown
+        .split(&#39;\n&#39;)
+        .map((line, index) =&gt; {
+          if (!/^#/.test(line) || index === 0) return line;
+          const is_vertical = /#\^/.test(line);
+          return (is_vertical ? &#39;\n----\n\n&#39; : &#39;\n---\n\n&#39;) + line.replace(&#39;#^&#39;, &#39;#&#39;);
+        })
+        .join(&#39;\n&#39;)
+    );
+  });
+};</code></pre>
+<p>and use it like this</p>
+<pre><code class="language-bash">$ reveal-md --preprocessor preproc.js slides.md</code></pre>
+<h3 id="print-to-pdf">Print to PDF</h3>
+<p>Create a (printable) PDF from the provided Markdown file:</p>
+<pre><code class="language-bash">reveal-md slides.md --print slides.pdf</code></pre>
+<p>The PDF is generated using Puppeteer. Alternatively, append <code>?print-pdf</code> to the url from the command-line or in the
+browser (make sure to remove the <code>#/</code> or <code>#/1</code> hash). Then print the slides using the browser&#39;s (not the native) print
+dialog. This seems to work in Chrome.</p>
+<p>By default, paper size is set to match options in your <a href="#revealjs-options"><code>reveal.json</code></a> file, falling back to a
+default value 960x700 pixels. To override this behaviour, you can pass custom dimensions or format in a command line
+option <code>--print-size</code>:</p>
+<pre><code class="language-bash">reveal-md slides.md --print slides.pdf --print-size 1024x768   # in pixels when no unit is given
+reveal-md slides.md --print slides.pdf --print-size 210x297mm  # valid units are: px, in, cm, mm
+reveal-md slides.md --print slides.pdf --print-size A4         # valid formats are: A0-6, Letter, Legal, Tabloid, Ledger</code></pre>
+<p>In case of an error, please try the following:</p>
+<ul>
+<li>Analyze debug output, e.g. <code>DEBUG=reveal-md reveal-md slides.md --print</code></li>
+<li>See <code>reveal-md help</code> for Puppeteer arguments (<code>puppeteer-launch-args</code> and <code>puppeteer-chromium-executable</code>)</li>
+</ul>
+<h3 id="static-website">Static Website</h3>
+<p>This will export the provided Markdown file into a stand-alone HTML website including scripts and stylesheets. The files
+are saved to the directory passed to the <code>--static</code> parameter (default: <code>./_static</code>):</p>
+<pre><code class="language-bash">reveal-md slides.md --static _site</code></pre>
+<p>This should copy images along with the slides. Use <code>--static-dirs</code> to copy directories with other static assets to the
+target directory. Use a comma-separated list to copy multiple directories.</p>
+<pre><code class="language-bash">reveal-md slides.md --static --static-dirs=assets</code></pre>
+<p>Providing a directory will result in a stand-alone overview page with links to the presentations (similar to a
+<a href="#directory-listing">directory listing</a>):</p>
+<pre><code class="language-bash">reveal-md dir/ --static</code></pre>
+<p>Additional <code>--absolute-url</code> and <code>--featured-slide</code> parameters could be used to generate <a href="http://ogp.me">OpenGraph</a>
+metadata enabling more attractive rendering for slide deck links when shared in some social sites.</p>
+<pre><code class="language-bash">reveal-md slides.md --static _site --absolute-url https://example.com --featured-slide 5</code></pre>
+<h3 id="disable-auto-open-browser">Disable Auto-open Browser</h3>
+<p>To disable auto-opening the browser:</p>
+<pre><code class="language-bash">reveal-md slides.md --disable-auto-open</code></pre>
+<h3 id="directory-listing">Directory Listing</h3>
+<p>Show (recursive) directory listing of Markdown files:</p>
+<pre><code class="language-bash">reveal-md dir/</code></pre>
+<p>Show directory listing of Markdown files in current directory:</p>
+<pre><code class="language-bash">reveal-md</code></pre>
+<h3 id="custom-port">Custom Port</h3>
+<p>Override port (default: <code>1948</code>):</p>
+<pre><code class="language-bash">reveal-md slides.md --port 8888</code></pre>
+<h3 id="custom-template">Custom Template</h3>
+<p>Override reveal.js HTML template
+(<a href="https://github.com/webpro/reveal-md/blob/master/lib/template/reveal.html">default template</a>):</p>
+<pre><code class="language-bash">reveal-md slides.md --template my-reveal-template.html</code></pre>
+<p>Override listing HTML template
+(<a href="https://github.com/webpro/reveal-md/blob/master/lib/template/listing.html">default template</a>):</p>
+<pre><code class="language-bash">reveal-md slides.md --listing-template my-listing-template.html</code></pre>
+<h2 id="related-projects--alternatives">Related Projects &amp; Alternatives</h2>
+<ul>
+<li><a href="https://slides.com/">Slides</a> is a place for creating, presenting and sharing slide decks.</li>
+<li><a href="https://github.com/jacksingleton/hacker-slides">Sandstorm Hacker Slides</a> is a simple app that combines Ace Editor and
+RevealJS.</li>
+<li><a href="https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware#tools">Tools</a> in the Plugins, Tools and
+Hardware section of Reveal.js.</li>
+<li><a href="https://github.com/yjwen/org-reveal">Org-Reveal</a> exports Org-mode contents to Reveal.js HTML presentation.</li>
+<li><a href="https://github.com/astefanutti/decktape">DeckTape</a> is a high-quality PDF exporter for HTML5 presentation frameworks.</li>
+<li><a href="https://gitpitch.com">GitPitch</a> generates slideshows from PITCHME.md found in hosted Git repos.</li>
+</ul>
+<h2 id="thank-you">Thank You</h2>
+<p>Many thanks to all <a href="https://github.com/webpro/reveal-md/graphs/contributors">contributors</a>!</p>
+<h2 id="license">License</h2>
+<p><a href="http://webpro.mit-license.org">MIT</a></p>
+</aside></script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"transition":"none","touch":true}, queryOptions);
+    </script>
+
+    <script src="./_assets/script.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

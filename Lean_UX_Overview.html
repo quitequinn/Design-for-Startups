@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/qt-dark.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">## Lean UX&nbsp;Principles
+# Overview
+</script></section><section  data-markdown><script type="text/template">
+### Recap
+Vision, Framing, and&nbsp;Outcomes
+<br/>↓
+<br/>Confidence in a problem/measurable&nbsp;solution
+</script></section><section  data-markdown><script type="text/template">
+### Lean UX
+Less focused on deliverables than traditional UX. 
+1. obtaining feedback as early as possible so that it can be used to make quick decisions.
+1. work in rapid, iterative cycles.
+1. feedback should inform each cycle.
+</script></section><section  data-markdown><script type="text/template">
+• Early customer validation over releasing products with unknown end-user value
+• Collaborative design over designing on an island
+• Solving user problems over designing the next “cool” feature
+• Measuring KPIs over undefined success metrics
+• Applying appropriate tools over following a rigid plan
+• Nimble design over heavy wireframes, comps or specs
+</script></section><section  data-markdown><script type="text/template">Value Proposition Design and the Business Model Canvas
+Explore different ways of balancing how your company creates, delivers and captures value using two essential early stage creative tools.
+
+2. Business Model Canvas
+Creatively iterate on your business concept using the Business Model Canvas tool.
+
+3. Prototyping & Testing
+Discover the importance of rapid prototyping and testing on early stage concepts to help in the evaluation and development process of your product or service.
+
+4. Funding Pitch
+Explore different ways of acquiring the crucial financial support that your business requires and learn presentation strategies for communicating your businesses goals.</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"transition":"none","touch":true}, queryOptions);
+    </script>
+
+    <script src="./_assets/script.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
