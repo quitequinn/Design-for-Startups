@@ -21,7 +21,7 @@ npm run dev # Starts a local server and opens any Markdown file as a reveal.js p
 
 npm run start # Starts it. (for production)
 
-npm run pdf # Generates PDFs
+FILE='YOUR_FILE' npm run pdf # Generates PDFs
 npm run static # Generate static files
 ```
 
