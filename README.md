@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/quitequinn/Design-for-Startups.svg?branch=master)](https://travis-ci.com/quitequinn/Design-for-Startups) 
 
-[See slides on Github pages.](https://quitequinn.github.io/{REPO-NAME}/)
+[See slides on Github pages.](https://quitequinn.github.io/Design-for-Startups/)
 
 This is a repo for this class's lectures.
 

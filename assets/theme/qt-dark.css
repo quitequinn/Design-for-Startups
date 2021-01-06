@@ -25,6 +25,16 @@ section.has-light-background h6 {
 }
 
 /*********************************************
+ * REVEAL FIXES
+ *********************************************/
+
+a[href^="_static"], a[href^="README"], a[href^="readme"], a[href^="slide.html"] {
+  display: none;
+}
+
+
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
