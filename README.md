@@ -30,3 +30,10 @@ npm run static # Generate static files
 ## Software
 
 Otherwise, I'm basically just using [reveal-md](https://github.com/webpro/reveal-md) so check it out if you have questions. 
+
+
+
+
+## Github Pages
+
+To setup Github pages all you have to do is copy your Githup PAT to your authorized Travis CI account.
