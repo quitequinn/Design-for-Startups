@@ -1,14 +1,13 @@
 
-## …don't I already know
 # Client Handoffs
 
 ---
 
-There’s no hand off in product design.
+Ya, there’s hand offs in product design, but..
 
 ---
 
-There’s no hand FINAL off in LEAN UX product design.
+There’s no **final** hand off in LEAN UX product design.
 
 ---
 
